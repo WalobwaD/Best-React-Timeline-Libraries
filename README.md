@@ -61,11 +61,70 @@
                     {/*insert element content here*/}
                     <h3 className="vertical-timeline-element-title">Content Title Goes Here</h3>
                     <h4 className="vertical-timeline-element-subtitle">Content Subtitle Goes Here</h4>
-                    <p>Content paragraph/description goes here</p>
+                    <p>Content paragraph or description goes here</p>
                 </VerticalTimelineElement>
             </VerticalTimeline>
         )
     }
 
-- After following the steps and creating more VerticalTimelineElements, (content can be passed in dynamically using props), the timeline should have a similar appearance to this and is completely modifiable using CSS. 
+- After following the steps and creating more VerticalTimelineElements, (content can be passed in dynamically using props), the timeline should have a similar appearance to this and is completely modifiable using CSS. Simple right?
 <img src="./RVT-results.png"></img>
+
+<h2>2. React-Chrono</h2>
+
+<p><a href="https://react-chrono.prabhumurthy.com/introduction/getting-started.html">React-Chrono</a> If you're a fan of building object separately for your components to make your work clean and readable, React-Chrono should be your library of choice. React-Chrono is a versatile timeline component that allows developers to render beautiful timelines with ease. It is designed to be data-driven and is flexible and straightforward to use, making it ideal for developers who want to create visually stunning timelines quickly.</p>
+
+<h3>Usage</h3>
+
+- Install the library using npm.
+    ```jsx
+    npm install react-chrono --save
+    ```
+- Import the library in your React component.
+
+    ```jsx
+    //React imports
+    import React from 'react';
+    //React-Chrono imports
+    import { Chrono } from "react-chrono";
+    ```
+- Create a React component and add the timeline elements. 
+- Building the timeline, you need to create a data object that contains the timeline elements. The data object should be an array of objects, each object represents a timeline element. The object should contain the following properties: 
+-  **title:** The title of the timeline element.
+-  **cardTitle:** The title of the timeline element card.
+-  **cardSubtitle:** The subtitle of the timeline element card.
+-  **cardDetailedText:** The detailed text of the timeline element card.
+-  The data is fed through the <code>items</code> prop of the Chrono component.
+-  The second prop <code>mode</code> is used to define the layout of the timeline. The library supports 3 modes: <code>HORIZONTAL</code>, <code>VERTICAL</code>, and <code>VERTICAL_ALTERNATING</code>. Here we've used the VERTICAL_ALTERNATING mode.
+  
+    ```jsx
+    // React Component called TimeLineComponent
+    const TimeLineComponent = () => {
+        //create the data object
+        const items = [
+            {
+            title: "May 1940",
+            cardTitle: "Dunkirk",
+            url: "http://google.com",
+            cardSubtitle:"Men of the British Expeditionary Force (BEF) wade out to a destroyer during the evacuation from Dunkirk.",
+            cardDetailedText: `Content descriptions can be added here.`
+        },
+        {
+            title: "June 1941",
+            cardTitle: "Operation Barbarossa",
+            cardSubtitle: `A column of Red Army prisoners taken during the first days of the German invasion`,
+            cardDetailedText: `Content description can be added here.`
+        }
+        
+        ]
+        return (
+            <div>
+                {/*Chrono is the parent component, all timeline elements should be wrapped inside it*/}
+                {/* React Chrono Component, takes in items as it's main prop and mode to determine whether it should display content vertically or dynamically*/ }
+                <Chrono items={items} mode="VERTICAL_ALTERNATING" />
+            </div>
+        )
+    }
+
+- After following these steps you should have a similar timeline to this.
+<img src="./React-Chrono.png"></img>

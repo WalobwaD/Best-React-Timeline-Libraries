@@ -1,7 +1,7 @@
 import { VerticalTimeline, VerticalTimelineElement } from 'react-vertical-timeline-component';
 import 'react-vertical-timeline-component/style.min.css';
 
-function App() {
+function ReactVerticalTimelineComponent() {
   return (
     <>
       <VerticalTimeline>
@@ -100,4 +100,4 @@ function App() {
   )
 }
 
-export default App
+export {ReactVerticalTimelineComponent};

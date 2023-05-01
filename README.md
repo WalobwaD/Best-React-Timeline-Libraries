@@ -215,7 +215,7 @@
 
 <img src="./EventTimeline.png"></img>
 
-<h5>Tailwind css/Tailblocks</h5>
+<h2>5. Tailwind css/Tailblocks</h2>
 
 <p> If  you are using tailwind css, and you aren't looking to install other dependancies for your React app, you can use <a href="https://tailblocks.cc/">tailblocks</a> to build a timeline. Tailblocks is a collection of ready to use Tailwind CSS blocks. It has a variety of components that can be used to build a timeline. Building a timeline with tailblocks is quite easy and straight forward. This also helps you save on space since we are not installing any other libraries apart from the official Tailwind CSS framework. </p>
 

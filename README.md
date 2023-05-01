@@ -96,6 +96,7 @@
 -  **cardDetailedText:** The detailed text of the timeline element card.
 -  The data is fed through the <code>items</code> prop of the Chrono component.
 -  The second prop <code>mode</code> is used to define the layout of the timeline. The library supports 3 modes: <code>HORIZONTAL</code>, <code>VERTICAL</code>, and <code>VERTICAL_ALTERNATING</code>. Here we've used the VERTICAL_ALTERNATING mode.
+- The library is completely customizable, checkout more props that you can use from the <a href="https://react-chrono.prabhumurthy.com/introduction/getting-started.html">documentation</a>
   
     ```jsx
     // React Component called TimeLineComponent
